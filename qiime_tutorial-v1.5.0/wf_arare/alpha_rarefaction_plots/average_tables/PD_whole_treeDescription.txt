@@ -1,0 +1,40 @@
+# PD_whole_tree.txt
+# Description
+xaxis: 10.0	23.0	36.0	49.0	62.0	75.0	88.0	101.0	114.0	127.0	140.0	
+xmax: 153.0
+>> Control_mouse_I.D._356
+color #f27304
+series 1.367278	2.065949	2.652949	3.071346	3.653675	3.811622	4.140283	4.432527	4.741784	5.055698	5.387786	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Control_mouse_I.D._354
+color #ff0000
+series 1.035354	1.891991	2.307839	3.074801	3.313258	3.683809	4.021742	4.37748	4.60499	4.984769	5.227981	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Control_mouse_I.D._355
+color #0000ff
+series 1.404575	1.932708	2.339604	2.702818	2.955971	3.319594	3.517702	3.677485	4.025569	4.187404	4.439773	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Control_mouse_I.D._593
+color #91278d
+series 1.547085	2.29021	2.866645	3.271281	3.623277	3.820838	4.033708	4.177789	4.409035	4.630015	4.754458	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Control_mouse_I.D._481
+color #008000
+series 1.359354	2.535151	3.183573	3.79934	4.344512	4.612737	4.705159	5.248348	5.587647	5.849644	6.1269	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Fasting_mouse_I.D._636
+color #5da09e
+series 1.592008	2.542923	3.378011	3.722147	4.22415	4.804797	5.09452	5.3433	5.825642	5.839653	6.201373	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Fasting_mouse_I.D._634
+color #7cecf4
+series 1.787135	3.070322	3.739396	4.241889	4.804815	5.234237	5.589313	5.793945	5.958663	6.187083	6.390589	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Fasting_mouse_I.D._635
+color #f49ac2
+series 1.79344	2.804028	3.854795	4.352492	4.965318	5.310092	5.744509	6.324471	6.533261	6.874577	7.265115	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+>> Fasting_mouse_I.D._607
+color #ffff00
+series 1.853793	3.046882	3.443394	4.345987	4.67555	5.275979	5.696855	5.986743	6.412335	6.8724	7.064095	
+error nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	

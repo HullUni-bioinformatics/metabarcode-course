@@ -1,0 +1,46 @@
+Logging started at 15:13:33 on 01 Oct 2014
+QIIME version: 1.5.0
+
+qiime_config values:
+blastmat_dir	/home/qiime/qiime_software/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/home/qiime/qiime_software/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/home/qiime/qiime_software/qiime-1.5.0-release/bin/start_parallel_jobs.py
+assign_taxonomy_reference_seqs_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/rep_set/gg_97_otus_4feb2011.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/home/qiime/qiime_software/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/home/qiime/qiime_software/qiime-1.5.0-release/bin
+denoiser_min_per_core	50
+working_dir	/tmp/
+python_exe_fp	/home/qiime/qiime_software/python-2.7.1-release/bin/python
+temp_dir	/tmp/
+blastall_fp	/home/qiime/qiime_software/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/taxonomies/greengenes_tax_rdp_train.txt
+
+parameter file values:
+
+Input file md5 sums:
+otus/otu_table.biom: 9546823d95aabf164e0f6e09df37b725
+Fasting_Map.txt: e16159d7122035797076d66b1a287962
+
+Executing commands.
+
+# Summarize Taxonomy command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/summarize_taxa.py -i otus/otu_table.biom -o wf_taxa_summary 
+
+Stdout:
+
+Stderr:
+
+# Plot Taxonomy Summary command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/plot_taxa_summary.py -i wf_taxa_summary/otu_table_L2.txt,wf_taxa_summary/otu_table_L3.txt,wf_taxa_summary/otu_table_L4.txt,wf_taxa_summary/otu_table_L5.txt,wf_taxa_summary/otu_table_L6.txt -o wf_taxa_summary/taxa_summary_plots/ 
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 15:13:37 on 01 Oct 2014

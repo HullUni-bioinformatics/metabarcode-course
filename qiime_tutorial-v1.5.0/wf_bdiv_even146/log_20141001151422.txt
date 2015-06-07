@@ -1,0 +1,146 @@
+Logging started at 15:14:22 on 01 Oct 2014
+QIIME version: 1.5.0
+
+qiime_config values:
+blastmat_dir	/home/qiime/qiime_software/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/home/qiime/qiime_software/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/home/qiime/qiime_software/qiime-1.5.0-release/bin/start_parallel_jobs.py
+assign_taxonomy_reference_seqs_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/rep_set/gg_97_otus_4feb2011.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/home/qiime/qiime_software/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/home/qiime/qiime_software/qiime-1.5.0-release/bin
+denoiser_min_per_core	50
+working_dir	/tmp/
+python_exe_fp	/home/qiime/qiime_software/python-2.7.1-release/bin/python
+temp_dir	/tmp/
+blastall_fp	/home/qiime/qiime_software/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/taxonomies/greengenes_tax_rdp_train.txt
+
+parameter file values:
+parallel:jobs_to_start	1
+
+Input file md5 sums:
+otus/otu_table.biom: 9546823d95aabf164e0f6e09df37b725
+Fasting_Map.txt: e16159d7122035797076d66b1a287962
+otus/rep_set.tre: fdd11da9dcf4b2d55187c6021bd0d181
+
+Executing commands.
+
+# Sample OTU table at 146 seqs/sample command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/single_rarefaction.py -i otus/otu_table.biom -o wf_bdiv_even146//otu_table_even146.biom -d 146
+
+Stdout:
+
+Stderr:
+
+# Build prefs file command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_prefs_file.py -m Fasting_Map.txt -o wf_bdiv_even146//prefs.txt  --mapping_headers_to_use Treatment,DOB
+
+Stdout:
+
+Stderr:
+
+# Beta Diversity (weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/beta_diversity.py -i wf_bdiv_even146//otu_table_even146.biom -o wf_bdiv_even146/ --metrics weighted_unifrac  -t otus/rep_set.tre 
+
+Stdout:
+
+Stderr:
+
+# Rename distance matrix (weighted_unifrac) command 
+mv wf_bdiv_even146//weighted_unifrac_otu_table_even146.txt wf_bdiv_even146//weighted_unifrac_dm.txt
+
+Stdout:
+
+Stderr:
+
+# Principal coordinates (weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/principal_coordinates.py -i wf_bdiv_even146//weighted_unifrac_dm.txt -o wf_bdiv_even146//weighted_unifrac_pc.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 3D plots (continuous coloring, weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_3d_plots.py -p wf_bdiv_even146//prefs.txt -i wf_bdiv_even146//weighted_unifrac_pc.txt -o wf_bdiv_even146//weighted_unifrac_3d_continuous/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 3D plots (discrete coloring, weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_3d_plots.py -b "Treatment,DOB" -i wf_bdiv_even146//weighted_unifrac_pc.txt -o wf_bdiv_even146//weighted_unifrac_3d_discrete/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 2D plots (continuous coloring, weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_2d_plots.py -p wf_bdiv_even146//prefs.txt -i wf_bdiv_even146//weighted_unifrac_pc.txt -o wf_bdiv_even146//weighted_unifrac_2d_continuous/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 2D plots (discrete coloring, weighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_2d_plots.py -b "Treatment,DOB" -i wf_bdiv_even146//weighted_unifrac_pc.txt -o wf_bdiv_even146//weighted_unifrac_2d_discrete/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Beta Diversity (unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/beta_diversity.py -i wf_bdiv_even146//otu_table_even146.biom -o wf_bdiv_even146/ --metrics unweighted_unifrac  -t otus/rep_set.tre 
+
+Stdout:
+
+Stderr:
+
+# Rename distance matrix (unweighted_unifrac) command 
+mv wf_bdiv_even146//unweighted_unifrac_otu_table_even146.txt wf_bdiv_even146//unweighted_unifrac_dm.txt
+
+Stdout:
+
+Stderr:
+
+# Principal coordinates (unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/principal_coordinates.py -i wf_bdiv_even146//unweighted_unifrac_dm.txt -o wf_bdiv_even146//unweighted_unifrac_pc.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 3D plots (continuous coloring, unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_3d_plots.py -p wf_bdiv_even146//prefs.txt -i wf_bdiv_even146//unweighted_unifrac_pc.txt -o wf_bdiv_even146//unweighted_unifrac_3d_continuous/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 3D plots (discrete coloring, unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_3d_plots.py -b "Treatment,DOB" -i wf_bdiv_even146//unweighted_unifrac_pc.txt -o wf_bdiv_even146//unweighted_unifrac_3d_discrete/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 2D plots (continuous coloring, unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_2d_plots.py -p wf_bdiv_even146//prefs.txt -i wf_bdiv_even146//unweighted_unifrac_pc.txt -o wf_bdiv_even146//unweighted_unifrac_2d_continuous/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+# Make 2D plots (discrete coloring, unweighted_unifrac) command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_2d_plots.py -b "Treatment,DOB" -i wf_bdiv_even146//unweighted_unifrac_pc.txt -o wf_bdiv_even146//unweighted_unifrac_2d_discrete/ -m Fasting_Map.txt 
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 15:14:28 on 01 Oct 2014

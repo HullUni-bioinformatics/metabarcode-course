@@ -1,0 +1,81 @@
+Logging started at 15:12:26 on 01 Oct 2014
+QIIME version: 1.5.0
+
+qiime_config values:
+blastmat_dir	/home/qiime/qiime_software/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/home/qiime/qiime_software/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/home/qiime/qiime_software/qiime-1.5.0-release/bin/start_parallel_jobs.py
+assign_taxonomy_reference_seqs_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/rep_set/gg_97_otus_4feb2011.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/home/qiime/qiime_software/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/home/qiime/qiime_software/qiime-1.5.0-release/bin
+denoiser_min_per_core	50
+working_dir	/tmp/
+python_exe_fp	/home/qiime/qiime_software/python-2.7.1-release/bin/python
+temp_dir	/tmp/
+blastall_fp	/home/qiime/qiime_software/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/taxonomies/greengenes_tax_rdp_train.txt
+
+parameter file values:
+parallel:jobs_to_start	1
+
+Input file md5 sums:
+split_library_output/seqs.fna: 602f6d8383a2b1efca65edfa94a551cb
+
+Executing commands.
+
+# Pick OTUs command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/pick_otus.py -i split_library_output/seqs.fna -o otus/uclust_picked_otus 
+
+Stdout:
+
+Stderr:
+
+# Pick representative set command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/pick_rep_set.py -i otus/uclust_picked_otus/seqs_otus.txt -f split_library_output/seqs.fna -l otus/rep_set//seqs_rep_set.log -o otus/rep_set//seqs_rep_set.fasta 
+
+Stdout:
+
+Stderr:
+
+# Assign taxonomy command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/assign_taxonomy.py -o otus/rdp_assigned_taxonomy -i otus/rep_set//seqs_rep_set.fasta 
+
+Stdout:
+
+Stderr:
+
+# Make OTU table command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_otu_table.py -i otus/uclust_picked_otus/seqs_otus.txt -t otus/rdp_assigned_taxonomy/seqs_rep_set_tax_assignments.txt -o otus/otu_table.biom 
+
+Stdout:
+
+Stderr:
+
+# Align sequences command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/align_seqs.py -i otus/rep_set//seqs_rep_set.fasta -o otus/pynast_aligned_seqs 
+
+Stdout:
+
+Stderr:
+
+# Filter alignment command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/filter_alignment.py -o otus/pynast_aligned_seqs -i otus/pynast_aligned_seqs/seqs_rep_set_aligned.fasta 
+
+Stdout:
+
+Stderr:
+
+# Build phylogenetic tree command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_phylogeny.py -i otus/pynast_aligned_seqs/seqs_rep_set_aligned_pfiltered.fasta -o otus/rep_set.tre 
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 15:13:33 on 01 Oct 2014

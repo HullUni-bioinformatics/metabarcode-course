@@ -1,0 +1,63 @@
+Logging started at 15:13:37 on 01 Oct 2014
+QIIME version: 1.5.0
+
+qiime_config values:
+blastmat_dir	/home/qiime/qiime_software/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/home/qiime/qiime_software/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/home/qiime/qiime_software/qiime-1.5.0-release/bin/start_parallel_jobs.py
+assign_taxonomy_reference_seqs_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/rep_set/gg_97_otus_4feb2011.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/home/qiime/qiime_software/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/home/qiime/qiime_software/qiime-1.5.0-release/bin
+denoiser_min_per_core	50
+working_dir	/tmp/
+python_exe_fp	/home/qiime/qiime_software/python-2.7.1-release/bin/python
+temp_dir	/tmp/
+blastall_fp	/home/qiime/qiime_software/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/home/qiime/qiime_software/gg_otus-4feb2011-release/taxonomies/greengenes_tax_rdp_train.txt
+
+parameter file values:
+alpha_diversity:metrics	shannon,PD_whole_tree,chao1,observed_species
+parallel:jobs_to_start	1
+
+Input file md5 sums:
+otus/otu_table.biom: 9546823d95aabf164e0f6e09df37b725
+Fasting_Map.txt: e16159d7122035797076d66b1a287962
+otus/rep_set.tre: fdd11da9dcf4b2d55187c6021bd0d181
+
+Executing commands.
+
+# Alpha rarefaction command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/multiple_rarefactions.py -i otus/otu_table.biom -m 10 -x 149 -s 13 -o wf_arare//rarefaction/ 
+
+Stdout:
+
+Stderr:
+
+# Alpha diversity on rarefied OTU tables command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/alpha_diversity.py -i wf_arare//rarefaction/ -o wf_arare//alpha_div/ --metrics shannon,PD_whole_tree,chao1,observed_species -t otus/rep_set.tre
+
+Stdout:
+
+Stderr:
+
+# Collate alpha command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/collate_alpha.py -i wf_arare//alpha_div/ -o wf_arare//alpha_div_collated/ 
+
+Stdout:
+
+Stderr:
+
+# Rarefaction plot: All metrics command 
+/home/qiime/qiime_software/python-2.7.1-release/bin/python /home/qiime/qiime_software/qiime-1.5.0-release/bin/make_rarefaction_plots.py -i wf_arare//alpha_div_collated/ -m Fasting_Map.txt -o wf_arare//alpha_rarefaction_plots/ 
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 15:14:22 on 01 Oct 2014
