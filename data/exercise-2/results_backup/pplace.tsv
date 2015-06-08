@@ -1,0 +1,17 @@
+# Constructed from biom file
+#OTU ID	pplace	taxomomy
+Triops newberryi	3.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops newberryi']
+Triops granarius	6.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops granarius']
+Lepidurus sp. BV-2012	1.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus', 's__Lepidurus sp. BV-2012']
+Triops cancriformis	14.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops cancriformis']
+Lepidurus apus lubbocki	4.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus', 's__Lepidurus_apus']
+Lepidurus apus apus	2.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus', 's__Lepidurus_apus']
+Triops cancriformis cancriformis	5.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops_cancriformis']
+Triops mauritanicus	1.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops mauritanicus']
+Triops mauritanicus mauritanicus	2.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops_mauritanicus']
+Triops	9.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops']
+Triops longicaudatus	37.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops longicaudatus']
+Lepidurus	3.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus']
+Lepidurus couesii	4.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus', 's__Lepidurus couesii']
+Lepidurus arcticus	1.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Lepidurus', 's__Lepidurus arcticus']
+Triops australiensis	8.0	['k__Metazoa', 'p__Arthropoda', 'c__Branchiopoda', 'o__Notostraca', 'f__Triopsidae', 'g__Triops', 's__Triops australiensis']
