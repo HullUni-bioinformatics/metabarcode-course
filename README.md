@@ -7,3 +7,8 @@ This repository should contain:
 - QIIME tutorial files
 - link to documentation
 - maybe some other misc
+
+The repository can be cloned to your local machine by issuing the following command in a terminal:
+```bash
+git clone --recursive https://github.com/HullUni-bioinformatics/metabarcode-course.git
+```
