@@ -1,3 +1,10 @@
 ## Exercise 4 - compare assignment strategies ##
 
 __BLAST-based vs. Phylogenetic placement__
+
+The idea of this exercise is to use the to perform taxonomic assignment for the 100 unknown _Notostraca_ queries that you have encountert in exercise 2, using both a BLAST-based and a Phylogenetic placement approach. THis can be done automatically using the __metaBEAT__ pipeline.
+ 
+See if you can do it!
+The data required for this exercise can be found in the `data` directory. If you get stuck there is a jupyter notebook that will walk you through the procedure in the `results_backup` directory.
+
+__Good luck!__
